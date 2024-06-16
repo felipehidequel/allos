@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Hello World</title>
-</head>
-<body>
-    <div class="container"></div>
-    <h1 class="text-center">ALLOS</h1>
+<html>
 
-    <div id="login-user" c-container="{{ url_for('login.login_button') }}"> </div>
+<head>
+    <title>Allos</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1>Allos</h1>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <form action="{{ url_for('login.auth') }}">
+                <button type="submit" class="btn btn-primary">Sign In with Twitter</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ url_for('static', filename='js/cru.js') }}"></script>
 </body>
+
 </html>
